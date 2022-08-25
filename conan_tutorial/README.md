@@ -13,8 +13,8 @@
     ```
 4. In your terminal execute the following command 
     ```bash
-    conan profile new default --detect` #(this will use gcc by default on linux)
-    conan profile update settings.compiler.libcxx=libstdc++11 default` #(use c++11 by default)
+    conan profile new default --detect #(this will use gcc by default on linux)
+    conan profile update settings.compiler.libcxx=libstdc++11 default #(use c++11 by default)
     mkdir build && cd build
     conan install ..
     ``` 
@@ -54,7 +54,7 @@
     ```
 2. To fix, this add `set(CMAKE_EXPORT_COMPILE_COMMANDS ON)` to your CMakeLists.txt
 3. Run cmake again
-4. Under your `c_cpp_porperties.json' add the following under `configurations`
+4. In your `c_cpp_porperties.json` add the following under `configurations`
     ```json
     "compileCommands": "${workspaceFolder}/build/compile_commands.json"
     ```
